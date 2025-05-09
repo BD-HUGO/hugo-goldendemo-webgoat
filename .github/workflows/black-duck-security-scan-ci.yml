@@ -30,6 +30,13 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
+        
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' # Options: 'temurin', 'zulu', 'adopt', etc.
+          java-version: '21'
+
       - name: Black Duck security scan
         uses: blackduck-inc/black-duck-security-scan@805cbd09e806b01907bbea0f990723c2bb85abe9
         with:
