@@ -45,11 +45,11 @@ jobs:
           ### ---------- POLARIS SCANNING: REQUIRED FIELDS ----------
           polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
           polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
-          polaris_assessment_types: "SCA"
+          polaris_assessment_types: "SAST, SCA"
           polaris_prComment_enabled: true
           github_token: ${{ secrets.GH_TOKEN }}
 
-          polaris_application_name: "BlackDuck-Demo"
+          polaris_application_name: "hugo-bd-demo"
           polaris_project_name: "hugo-goldendemo-webgoat"
 
           ### ---------- SRM SCANNING: REQUIRED FIELDS ----------
