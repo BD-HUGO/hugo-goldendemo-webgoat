@@ -1,7 +1,7 @@
 name: polaris-ss-action
 on:
   push:
-    branches: [ main, master, develop, stage, release ]
+    branches: [ main, master, develop, release ]
   pull_request:
     branches: [ main, master, develop, stage, release ]
   workflow_dispatch:
@@ -23,8 +23,8 @@ jobs:
         polaris_server_url: ${{ secrets.POLARIS_SERVER_URL }}
         polaris_access_token: ${{ secrets.POLARIS_ACCESS_TOKEN }}
         polaris_assessment_types: 'SAST,SCA'
-        polaris_application_name: "hugo-bd-demo"
-        polaris_project_name: "hugo-goldendemo-webgoat"
+        polaris_application_name: "SAST & SCA Demo #1"
+        polaris_project_name: "webgoat"
         polaris_prComment_enabled: 'true'
         polaris_reports_sarif_create: 'true'
         polaris_upload_sarif_report: 'false'
